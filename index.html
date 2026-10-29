@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal de Robótica CBA | Team Bellas Artes Bots</title>
+  <meta name="description" content="Portal centralizador de las plataformas digitales del Club de Robótica y Team Bellas Artes Bots del Colegio Bellas Artes: Academia, Plan Técnico WRO y Sistema de Rondas." />
+  <meta name="theme-color" content="#001838" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/logo.png" />
+  <link rel="apple-touch-icon" href="assets/img/logo.png" />
+
+  <!-- Google Fonts: Orbitron, Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Orbitron:wght@500;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient background glow effects -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-glow bg-glow-3"></div>
+  <div class="bg-grid-pattern"></div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#hero" class="brand-identity">
+        <div class="brand-logo-frame">
+          <img src="assets/img/logo.png" alt="Logo CBA Bots" class="brand-logo-img" />
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">TEAM BELLAS ARTES BOTS</span>
+          <span class="brand-subtitle">Colegio Bellas Artes • Maracaibo</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#plataformas" class="nav-item">Plataformas</a>
+        <a href="#ecosistema" class="nav-item">Ecosistema</a>
+        <a href="#acerca" class="nav-item">Nosotros</a>
+        <a href="https://github.com/themiguedev" target="_blank" rel="noopener noreferrer" class="btn-github-pill">
+          <i class="fa-brands fa-github"></i>
+          <span>GitHub</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span>Ecosistema Tecnológico & Competitivo CBA</span>
+        </div>
+
+        <h1 class="hero-title">
+          Centro Digital de Robótica
+          <span class="gradient-text">Team Bellas Artes Bots</span>
+        </h1>
+
+        <p class="hero-description">
+          Hub centralizado de acceso a las soluciones técnicas, pedagógicas y competitivas 
+          desarrolladas para el Club de Robótica del Colegio Bellas Artes. 
+          Selecciona una de las plataformas oficiales a continuación.
+        </p>
+
+        <!-- Quick Stats -->
+        <div class="stats-ribbon">
+          <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Plataformas Activas</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <span class="stat-number">WRO</span>
+            <span class="stat-label">Competencia Oficial</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <span class="stat-number">SPIKE</span>
+            <span class="stat-label">LEGO Prime System</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Online & Cloud</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATFORMS SECTION -->
+    <section id="plataformas" class="platforms-section">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-layer-group"></i> PLATAFORMAS OFICIALES
+          </div>
+          <h2 class="section-title">Portales y Aplicaciones Centralizadas</h2>
+          <p class="section-subtitle">
+            Acceso directo e instantáneo a los tres entornos digitales del club.
+          </p>
+
+          <!-- Search & Filter Controls -->
+          <div class="filter-bar">
+            <div class="search-input-wrap">
+              <i class="fa-solid fa-magnifying-glass search-icon"></i>
+              <input type="text" id="platformSearch" placeholder="Buscar por plataforma, tecnología o función..." />
+              <button id="clearSearch" class="clear-btn" aria-label="Limpiar búsqueda" style="display: none;">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="filter-buttons">
+              <button class="filter-btn active" data-filter="all">Todas</button>
+              <button class="filter-btn" data-filter="academica">Academia</button>
+              <button class="filter-btn" data-filter="tecnica">Ingeniería WRO</button>
+              <button class="filter-btn" data-filter="evaluacion">Evaluación CBA</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARDS GRID -->
+        <div class="cards-grid" id="cardsGrid">
+          
+          <!-- CARD 1: ACADEMIA DE ROBÓTICA -->
+          <article class="platform-card" data-category="academica" data-keywords="academia robotica formacion niños cba lego scratch cursos bitbots programacion maracaibo">
+            <div class="card-glow-border"></div>
+            <div class="card-inner">
+              <div class="card-top">
+                <div class="category-badge badge-academia">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <span>Academia & Formación</span>
+                </div>
+                <div class="status-indicator" title="Plataforma en línea">
+                  <span class="status-ping"></span>
+                  <span class="status-text">En línea</span>
+                </div>
+              </div>
+
+              <div class="card-icon-banner">
+                <div class="icon-avatar avatar-academia">
+                  <i class="fa-solid fa-shapes"></i>
+                </div>
+                <div class="card-title-group">
+                  <h3 class="card-title">Academia de Robótica CBA</h3>
+                  <span class="card-entity">Team Bellas Artes Bots • Semillero</span>
+                </div>
+              </div>
+
+              <p class="card-summary">
+                Portal institucional y formativo para el desarrollo de competencias tecnológicas, 
+                programación y robótica educativa desde los 4 años hasta secundaria. 
+                Sede de la selección oficial BITBOTS.
+              </p>
+
+              <div class="feature-tags">
+                <span class="feature-tag"><i class="fa-solid fa-robot"></i> LEGO Education</span>
+                <span class="feature-tag"><i class="fa-solid fa-code"></i> Scratch & Python</span>
+                <span class="feature-tag"><i class="fa-solid fa-users"></i> Selección BITBOTS</span>
+                <span class="feature-tag"><i class="fa-solid fa-school"></i> Plan Curricular</span>
+              </div>
+
+              <div class="card-url-box">
+                <span class="url-label">Enlace oficial:</span>
+                <code class="url-code">themiguedev.github.io/academia-robotica/</code>
+              </div>
+
+              <div class="card-actions">
+                <a href="https://themiguedev.github.io/academia-robotica/" target="_blank" rel="noopener noreferrer" class="btn-launch btn-launch-academia">
+                  <span>Ingresar a la Academia</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <button class="btn-copy-url" data-url="https://themiguedev.github.io/academia-robotica/" title="Copiar enlace">
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 2: PLAN WRO -->
+          <article class="platform-card" data-category="tecnica" data-keywords="plan wro spike prime lego ingenieria tecnica modelo 3d giroscopio misiones alineacion algoritmo">
+            <div class="card-glow-border"></div>
+            <div class="card-inner">
+              <div class="card-top">
+                <div class="category-badge badge-wro">
+                  <i class="fa-solid fa-gear"></i>
+                  <span>Ingeniería Competitiva</span>
+                </div>
+                <div class="status-indicator" title="Plataforma en línea">
+                  <span class="status-ping"></span>
+                  <span class="status-text">En línea</span>
+                </div>
+              </div>
+
+              <div class="card-icon-banner">
+                <div class="icon-avatar avatar-wro">
+                  <i class="fa-solid fa-microchip"></i>
+                </div>
+                <div class="card-title-group">
+                  <h3 class="card-title">PLAN WRO • SPIKE Prime</h3>
+                  <span class="card-entity">Arquitectura Técnica & Estrategia</span>
+                </div>
+              </div>
+
+              <p class="card-summary">
+                Plataforma técnica de alto rendimiento para la preparación del robot de competencia WRO. 
+                Incluye visor 3D interactivo de componentes LEGO SPIKE Prime, algoritmos giroscópicos, 
+                calibración de sensores y guías de misiones.
+              </p>
+
+              <div class="feature-tags">
+                <span class="feature-tag"><i class="fa-solid fa-cube"></i> Visor 3D Interactivo</span>
+                <span class="feature-tag"><i class="fa-solid fa-compass"></i> Giroscopio & Odometría</span>
+                <span class="feature-tag"><i class="fa-solid fa-crosshairs"></i> Sensores de Color</span>
+                <span class="feature-tag"><i class="fa-solid fa-trophy"></i> Estrategia WRO</span>
+              </div>
+
+              <div class="card-url-box">
+                <span class="url-label">Enlace oficial:</span>
+                <code class="url-code">themiguedev.github.io/PLAN-WRO/</code>
+              </div>
+
+              <div class="card-actions">
+                <a href="https://themiguedev.github.io/PLAN-WRO/" target="_blank" rel="noopener noreferrer" class="btn-launch btn-launch-wro">
+                  <span>Abrir Plataforma Técnica</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <button class="btn-copy-url" data-url="https://themiguedev.github.io/PLAN-WRO/" title="Copiar enlace">
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 3: CBA-WRO -->
+          <article class="platform-card" data-category="evaluacion" data-keywords="cba wro sistema evaluacion rondas bitacora tablero jueces tiempo puntaje cronometro">
+            <div class="card-glow-border"></div>
+            <div class="card-inner">
+              <div class="card-top">
+                <div class="category-badge badge-cba">
+                  <i class="fa-solid fa-chart-line"></i>
+                  <span>Gestión & Arbitraje</span>
+                </div>
+                <div class="status-indicator" title="Plataforma en línea">
+                  <span class="status-ping"></span>
+                  <span class="status-text">En línea</span>
+                </div>
+              </div>
+
+              <div class="card-icon-banner">
+                <div class="icon-avatar avatar-cba">
+                  <i class="fa-solid fa-stopwatch-20"></i>
+                </div>
+                <div class="card-title-group">
+                  <h3 class="card-title">Sistema CBA-WRO</h3>
+                  <span class="card-entity">Seguimiento de Rondas & Bitácora</span>
+                </div>
+              </div>
+
+              <p class="card-summary">
+                Sistema integral para el registro de corridas, bitácora técnica de fallas, 
+                cronometraje oficial y cálculo en vivo del puntaje de los equipos de robótica para 
+                competencias y pruebas internas bajo reglamento WRO Venezuela.
+              </p>
+
+              <div class="feature-tags">
+                <span class="feature-tag"><i class="fa-solid fa-stopwatch"></i> Cronómetro de Ronda</span>
+                <span class="feature-tag"><i class="fa-solid fa-clipboard-check"></i> Bitácora de Fallas</span>
+                <span class="feature-tag"><i class="fa-solid fa-calculator"></i> Puntuación WRO</span>
+                <span class="feature-tag"><i class="fa-solid fa-id-card-clip"></i> Panel de Jueces</span>
+              </div>
+
+              <div class="card-url-box">
+                <span class="url-label">Enlace oficial:</span>
+                <code class="url-code">themiguedev.github.io/CBA-WRO/</code>
+              </div>
+
+              <div class="card-actions">
+                <a href="https://themiguedev.github.io/CBA-WRO/" target="_blank" rel="noopener noreferrer" class="btn-launch btn-launch-cba">
+                  <span>Acceder a Sistema WRO</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <button class="btn-copy-url" data-url="https://themiguedev.github.io/CBA-WRO/" title="Copiar enlace">
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div id="noResults" class="no-results-box" style="display: none;">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <p>No se encontraron plataformas que coincidan con la búsqueda.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKFLOW / ECOSYSTEM SYNERGY SECTION -->
+    <section id="ecosistema" class="ecosystem-section">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="section-tag mx-auto">
+            <i class="fa-solid fa-diagram-project"></i> FLUJO DE TRABAJO
+          </div>
+          <h2 class="section-title">¿Cómo interactúan estas plataformas?</h2>
+          <p class="section-subtitle max-w-2xl">
+            Cada solución cumple un rol fundamental en el ciclo de vida del estudiante y del equipo de competición:
+          </p>
+        </div>
+
+        <div class="flow-steps">
+          <div class="flow-card">
+            <div class="flow-step-num">01</div>
+            <div class="flow-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h4 class="flow-title">1. Formación de Base</h4>
+            <p class="flow-desc">
+              En la <strong>Academia de Robótica</strong> los estudiantes adquieren lógica computacional, 
+              diseño estructural y principios de programación desde edades tempranas.
+            </p>
+          </div>
+
+          <div class="flow-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+          <div class="flow-card">
+            <div class="flow-step-num">02</div>
+            <div class="flow-icon"><i class="fa-solid fa-microchip"></i></div>
+            <h4 class="flow-title">2. Ingeniería Competitiva</h4>
+            <p class="flow-desc">
+              Con <strong>PLAN WRO</strong> el equipo construye y optimiza el chasis SPIKE Prime, 
+              programa rutinas con giroscopio y documenta la ingeniería del prototipo.
+            </p>
+          </div>
+
+          <div class="flow-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+          <div class="flow-card">
+            <div class="flow-step-num">03</div>
+            <div class="flow-icon"><i class="fa-solid fa-chart-column"></i></div>
+            <h4 class="flow-title">3. Arbitraje y Analítica</h4>
+            <p class="flow-desc">
+              En <strong>CBA-WRO</strong> se cronometran las corridas, se analizan los fallos 
+              mecánicos/algorítmicos y se asegura el máximo puntaje en mesa.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="acerca" class="about-section">
+      <div class="section-container">
+        <div class="about-card">
+          <div class="about-badge">
+            <i class="fa-solid fa-award"></i>
+            <span>Orgullo Institucional</span>
+          </div>
+          <h3 class="about-heading">Colegio Bellas Artes • Maracaibo</h3>
+          <p class="about-text">
+            El <strong>Team Bellas Artes Bots</strong> representa la vanguardia en educación STEAM, 
+            robótica aplicada y pensamiento crítico en el Estado Zulia, Venezuela. 
+            A través de este portal, entrenadores, estudiantes y jueces disponen de un ecosistema 
+            unificado para maximizar su desempeño en la World Robot Olympiad (WRO) y competencias internacionales.
+          </p>
+          <div class="about-badges">
+            <span class="about-pill"><i class="fa-solid fa-trophy"></i> Categorías RoboMission & RoboSports</span>
+            <span class="about-pill"><i class="fa-solid fa-location-dot"></i> Maracaibo, Venezuela</span>
+            <span class="about-pill"><i class="fa-solid fa-shield-halved"></i> Selección BITBOTS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col-brand">
+        <div class="footer-logo">
+          <img src="assets/img/logo.png" alt="Logo CBA" />
+          <span>TEAM BELLAS ARTES BOTS</span>
+        </div>
+        <p class="footer-tagline">
+          Ecosistema integral de robótica y tecnología educativa del Colegio Bellas Artes.
+        </p>
+        <div class="footer-socials">
+          <a href="https://github.com/themiguedev" target="_blank" rel="noopener noreferrer" aria-label="GitHub themiguedev">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col-links">
+        <h4 class="footer-col-title">Plataformas Centralizadas</h4>
+        <ul class="footer-list">
+          <li>
+            <a href="https://themiguedev.github.io/academia-robotica/" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-graduation-cap"></i> Academia de Robótica CBA
+            </a>
+          </li>
+          <li>
+            <a href="https://themiguedev.github.io/PLAN-WRO/" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-microchip"></i> PLAN WRO (SPIKE Prime)
+            </a>
+          </li>
+          <li>
+            <a href="https://themiguedev.github.io/CBA-WRO/" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-stopwatch-20"></i> Sistema CBA-WRO (Rondas)
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col-links">
+        <h4 class="footer-col-title">Desarrollador</h4>
+        <ul class="footer-list">
+          <li>
+            <a href="https://github.com/themiguedev" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-github"></i> @themiguedev en GitHub
+            </a>
+          </li>
+          <li>
+            <span class="footer-meta-item">
+              <i class="fa-solid fa-code-branch"></i> Repositorios de Código Abierto
+            </span>
+          </li>
+          <li>
+            <span class="footer-meta-item">
+              <i class="fa-solid fa-circle-check"></i> Desplegado en GitHub Pages
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear"></span> Team Bellas Artes Bots • Colegio Bellas Artes Maracaibo. Desarrollado por <a href="https://github.com/themiguedev" target="_blank" rel="noopener noreferrer">@themiguedev</a>.</p>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div id="toastNotification" class="toast-notification">
+    <i class="fa-solid fa-check-circle"></i>
+    <span id="toastMessage">Enlace copiado al portapapeles</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
