@@ -49,20 +49,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2800);
   }
 
-  // 4. Verificación sutil de estado (Online Ping)
-  const platforms = [
-    { selector: '.badge-academia', url: 'https://themiguedev.github.io/academia-robotica/' },
-    { selector: '.badge-wro', url: 'https://themiguedev.github.io/PLAN-WRO/' },
-    { selector: '.badge-cba', url: 'https://themiguedev.github.io/CBA-WRO/' }
-  ];
-
-  platforms.forEach(p => {
-    fetch(p.url, { method: 'HEAD', mode: 'no-cors' })
-      .then(() => {
-        // Marcado como activo
-      })
-      .catch(() => {
-        // Modo offline
-      });
-  });
 });

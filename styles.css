@@ -446,22 +446,6 @@ body {
   color: #34d399;
 }
 
-.status-indicator {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.75rem;
-  color: var(--status-green);
-  font-weight: 500;
-}
-
-.status-ping {
-  width: 7px;
-  height: 7px;
-  background-color: var(--status-green);
-  border-radius: 50%;
-  box-shadow: 0 0 8px var(--status-glow);
-}
 
 .card-icon-banner {
   display: flex;
