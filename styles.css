@@ -253,8 +253,8 @@ main {
 /* CARDS GRID */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(1.25rem, 2.5vw, 2rem);
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2vw, 1.75rem);
   margin-top: 1rem;
 }
 
@@ -299,6 +299,10 @@ main {
   background: linear-gradient(90deg, #10B981, #059669);
 }
 
+.platform-card[data-category="portal"] .card-glow-border {
+  background: linear-gradient(90deg, #002855, #007BFF);
+}
+
 .card-inner {
   padding: clamp(1.4rem, 3vw, 2rem);
   display: flex;
@@ -340,6 +344,12 @@ main {
   background: linear-gradient(135deg, rgba(5, 150, 105, 0.12), rgba(16, 185, 129, 0.08));
   border: 1px solid rgba(5, 150, 105, 0.25);
   color: var(--status-green);
+}
+
+.avatar-portal {
+  background: linear-gradient(135deg, rgba(0, 40, 85, 0.12), rgba(0, 123, 255, 0.08));
+  border: 1px solid rgba(0, 40, 85, 0.25);
+  color: var(--cba-navy);
 }
 
 .card-title-group {
@@ -453,6 +463,19 @@ main {
   transform: translateY(-2px);
 }
 
+.btn-launch-portal {
+  background: linear-gradient(135deg, #002855 0%, #004080 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 40, 85, 0.3);
+}
+
+.btn-launch-portal:hover {
+  background: linear-gradient(135deg, #003366 0%, #002855 100%);
+  box-shadow: 0 6px 20px rgba(0, 40, 85, 0.45);
+  transform: translateY(-2px);
+  color: #FFD700;
+}
+
 .btn-copy-url {
   width: 46px;
   height: 46px;
@@ -474,6 +497,16 @@ main {
   color: var(--cba-navy);
   border-color: rgba(0, 40, 85, 0.25);
   transform: translateY(-1px);
+}
+
+.btn-icon-link {
+  text-decoration: none;
+}
+
+.btn-icon-link:hover {
+  background: var(--cba-navy);
+  color: #FFD700;
+  border-color: var(--cba-navy);
 }
 
 /* ABOUT SECTION */
@@ -722,10 +755,10 @@ main {
    BREAKPOINTS RESPONSIVOS E INTELIGENTES
    ========================================================================== */
 
-/* Tablets y Laptops Pequeñas (≤ 1024px) */
-@media (max-width: 1024px) {
+/* Laptops y Pantallas medianas (≤ 1180px) */
+@media (max-width: 1180px) {
   .cards-grid {
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
 }

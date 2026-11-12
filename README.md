@@ -8,13 +8,14 @@
 
 ## 📌 Plataformas Centralizadas
 
-Este repositorio aloja la página web de bienvenida y acceso rápido a los tres entornos digitales del club:
+Este repositorio aloja la página web de bienvenida y acceso rápido a los entornos digitales del club:
 
 | Plataforma | Propósito | Enlace de Acceso |
 | :--- | :--- | :--- |
 | **🎓 Academia de Robótica CBA** | Formación en lógica, programación (Scratch/Python) y robótica inicial (LEGO Education). Semillero oficial BITBOTS. | [Ir a la Academia](https://themiguedev.github.io/academia-robotica/) |
 | **⚙️ PLAN WRO (SPIKE Prime)** | Plataforma técnica y estratégica para la World Robot Olympiad: visualizador 3D, algoritmos giroscópicos y alineación. | [Ir a PLAN WRO](https://themiguedev.github.io/PLAN-WRO/) |
 | **⏱️ Sistema CBA-WRO** | Software de control de rondas, arbitraje, cronómetro oficial, bitácora técnica de fallas y puntuación en vivo. | [Ir a Sistema CBA-WRO](https://themiguedev.github.io/CBA-WRO/) |
+| **🌐 Portal de Robótica CBA** | Hub centralizador del ecosistema digital, acceso a repositorios oficiales y despliegues en GitHub Pages. | [Ir al Portal](https://themiguedev.github.io/portal-robotica-cba/) |
 
 ---
 
