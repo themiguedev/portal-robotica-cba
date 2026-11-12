@@ -265,26 +265,97 @@ main {
   border: 1px solid var(--border-card);
   box-shadow: var(--shadow-card);
   overflow: hidden;
-  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
   display: flex;
   flex-direction: column;
+  transform-style: preserve-3d;
+}
+
+/* Cuadrícula holográfica de fondo estilo blueprint */
+.holo-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(0, 40, 85, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 40, 85, 0.04) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+/* Haz de escáner láser 3D */
+.holo-laser {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  right: 0;
+  height: 75px;
+  background: linear-gradient(180deg, transparent 0%, var(--laser-color, rgba(0, 102, 204, 0.15)) 70%, var(--laser-line, #007BFF) 100%);
+  border-bottom: 2.5px solid var(--laser-line, #007BFF);
+  box-shadow: 0 0 16px var(--laser-line, #007BFF);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes scan-laser {
+  0% { top: -75px; }
+  100% { top: 105%; }
 }
 
 @media (hover: hover) {
   .platform-card:hover {
-    transform: translateY(-6px);
-    border-color: var(--card-border-hover);
-    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-8px) scale(1.02);
+    border-color: var(--theme-color, var(--electric-blue));
+    box-shadow: 0 20px 45px -8px rgba(0, 40, 85, 0.14), 0 0 35px var(--glow-color, rgba(0, 102, 204, 0.25)), inset 0 0 15px var(--glow-color, rgba(0, 102, 204, 0.08));
+  }
+
+  .platform-card:hover .holo-laser {
+    opacity: 1;
+    animation: scan-laser 2.2s linear infinite;
   }
 }
 
 .platform-card:active {
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1);
 }
 
 .card-glow-border {
   height: 4px;
   width: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+/* Variables cromáticas del escáner holográfico por categoría */
+.platform-card[data-category="academica"] {
+  --theme-color: #f59e0b;
+  --glow-color: rgba(245, 158, 11, 0.35);
+  --laser-line: #fbbf24;
+  --laser-color: rgba(245, 158, 11, 0.20);
+}
+
+.platform-card[data-category="tecnica"] {
+  --theme-color: #007BFF;
+  --glow-color: rgba(0, 123, 255, 0.35);
+  --laser-line: #38bdf8;
+  --laser-color: rgba(0, 123, 255, 0.20);
+}
+
+.platform-card[data-category="evaluacion"] {
+  --theme-color: #10B981;
+  --glow-color: rgba(16, 185, 129, 0.35);
+  --laser-line: #34d399;
+  --laser-color: rgba(16, 185, 129, 0.20);
+}
+
+.platform-card[data-category="asistencias"] {
+  --theme-color: #6366f1;
+  --glow-color: rgba(99, 102, 241, 0.35);
+  --laser-line: #a5b4fc;
+  --laser-color: rgba(99, 102, 241, 0.20);
 }
 
 .platform-card[data-category="academica"] .card-glow-border {
@@ -312,6 +383,8 @@ main {
   display: flex;
   flex-direction: column;
   height: 100%;
+  position: relative;
+  z-index: 3;
 }
 
 .card-icon-banner {
