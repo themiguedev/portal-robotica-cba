@@ -560,6 +560,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
   gap: clamp(2rem, 5vw, 4rem);
   margin-bottom: 2.5rem;
 }
