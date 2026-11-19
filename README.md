@@ -1,7 +1,7 @@
 # 🤖 Centro Digital de Robótica • Team Bellas Artes Bots
 > Portal centralizado del ecosistema digital, académico y competitivo de robótica del **Colegio Bellas Artes** (Maracaibo, Venezuela).
 
-- 🌐 **Portal Web Oficial:** [https://themiguedev.github.io/portal-robotica-cba/](https://themiguedev.github.io/portal-robotica-cba/)
+- 🌐 **Portal Web Oficial:** [https://academiaroboticacba.pages.dev/](https://academiaroboticacba.pages.dev/)
 - 💻 **Repositorio en GitHub:** [https://github.com/themiguedev/portal-robotica-cba](https://github.com/themiguedev/portal-robotica-cba)
 
 ---
