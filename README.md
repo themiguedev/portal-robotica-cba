@@ -12,7 +12,7 @@ Este repositorio aloja la página web de bienvenida y acceso rápido a los entor
 
 | Plataforma | Propósito | Enlace de Acceso |
 | :--- | :--- | :--- |
-| **🎓 Academia de Robótica CBA** | Formación en lógica, programación (Scratch/Python) y robótica inicial (LEGO Education). Semillero oficial BITBOTS. | [Ir a la Academia](https://themiguedev.github.io/academia-robotica/) |
+| **🎓 Academia de Robótica CBA** | Formación en lógica, programación (Scratch/Python) y robótica inicial (LEGO Education). Semillero oficial BITBOTS. | [Ir a la Academia](https://academiaroboticacba.pages.dev/) |
 | **⚙️ PLAN WRO (SPIKE Prime)** | Plataforma técnica y estratégica para la World Robot Olympiad: visualizador 3D, algoritmos giroscópicos y alineación. | [Ir a PLAN WRO](https://themiguedev.github.io/PLAN-WRO/) |
 | **⏱️ Sistema CBA-WRO** | Software de control de rondas, arbitraje, cronómetro oficial, bitácora técnica de fallas y puntuación en vivo. | [Ir a Sistema CBA-WRO](https://themiguedev.github.io/CBA-WRO/) |
 | **📋 Control de Asistencias** | Sistema web de control y registro diario de asistencias para profesores y entrenadores CBA. | [Ir a Control de Asistencias](https://themiguedev.github.io/control-asistencias/) |
